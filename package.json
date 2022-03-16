@@ -1,0 +1,22 @@
+{
+  "name": "smarty-backend",
+  "version": "1.0.0",
+  "description": "Express APIRest with mobile devices information for the Smarty Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "express",
+    "APIRest"
+  ],
+  "author": "Jose Manuel Báez Soriano",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
