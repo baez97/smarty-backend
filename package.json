@@ -2,8 +2,10 @@
   "name": "smarty-backend",
   "version": "1.0.0",
   "description": "Express APIRest with mobile devices information for the Smarty Web Application",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
     "test": "jest"
   },
   "keywords": [
@@ -14,7 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
