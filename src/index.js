@@ -9,5 +9,5 @@ connectDB();
 app.use(microserviceRouter)
 
 app.listen(port, () => {
-  console.log(`🚀 Smarty backend is up and running! Port > ${port}`);
+  console.log(`\n🚀 Smarty backend is up and running at port ${port} 🚀\n`);
 });
