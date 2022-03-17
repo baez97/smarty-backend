@@ -6,6 +6,11 @@ const callback = err => err && console.error('Connection to the Smarty database 
 
 const config = { useUnifiedTopology: true, useNewUrlParser: true };
 
-const connectDB = () => mongoose.connect(DATABASE_URL, config, callback);
+let mongooseInstance;
+const connectDB = async () => {
+  await mongoose.connect(DATABASE_URL, config, callback);
+  mongooseInstance = mongoose;
+};
+const getMongooseInstance = () => mongooseInstance;
 
-module.exports = connectDB;
+module.exports = { connectDB, getMongooseInstance };

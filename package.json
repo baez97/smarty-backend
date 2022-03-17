@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "start:dev": "nodemon src/index.js",
-    "test": "jest"
+    "test": "jest --forceExit"
   },
   "keywords": [
     "express",
@@ -20,6 +20,10 @@
     "mongoose": "^6.2.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@types/jest": "^27.4.1",
+    "@types/mongoose": "^5.11.97",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   }
 }
