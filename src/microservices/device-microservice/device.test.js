@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const request = require('supertest');
-const { getMongooseInstance } = require('../../db/config');
 const app = require('../../index');
 
 describe('The Device Microservice...', () => {
