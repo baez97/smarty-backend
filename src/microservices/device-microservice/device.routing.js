@@ -7,6 +7,7 @@ const deviceMicroservice = new DeviceMicroservice();
 deviceRouter.use(express.json());
 
 deviceRouter.get('/all', deviceMicroservice.getAll);
+deviceRouter.get('/best-sellers', deviceMicroservice.getBestSellers);
 deviceRouter.get('/:id', deviceMicroservice.getById);
 
 module.exports = deviceRouter;

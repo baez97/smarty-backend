@@ -1,7 +1,6 @@
 const models = require('../../db/models');
 const ERROR_TYPES = require('../../constants/error-types');
 const { validateIdParam, smartyLogger } = require('../../helpers');
-
 class DeviceMicroservice {
   constructor() {
     this.deviceCollection = models.DeviceModel
@@ -33,6 +32,21 @@ class DeviceMicroservice {
       res.send(device);
     } catch(e) {
       smartyLogger.log(e);
+      next({ errorType: ERROR_TYPES.INTERNAL });
+    }
+  }
+
+  getBestSellers = async (_, res, next) => {
+    try {
+      const allDevices = await this.deviceCollection.find();
+      const bestSellers = [];
+      allDevices.forEach(iDevice => {
+        if (iDevice.manufacturer === 'Apple') {
+          bestSellers.push(iDevice._id);
+        }
+      });
+      res.send(bestSellers);
+    } catch {
       next({ errorType: ERROR_TYPES.INTERNAL });
     }
   }
